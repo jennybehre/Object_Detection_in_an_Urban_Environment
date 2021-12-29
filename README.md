@@ -1,4 +1,4 @@
-# Object_Detection_in_an_Urban_Environment
+# Object detection in an urban environment
 
 ## Project overview
 This section should contain a brief description of the project and what we are trying to achieve. Why is object detection such an important component of self driving car systems?
