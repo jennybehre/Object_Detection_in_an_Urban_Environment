@@ -17,11 +17,11 @@ This section should contain a quantitative and qualitative description of the da
 
 With the Exploratory Data Analysis.ipynb jupyter notebook it is possible to look at several images from the Waymo Open dataset. Vehicles are drawn with red, pedestrians with blue and cyclists with green rectangles. As you can see in the following images the dataset contains images with perfect weather conditions like a clear blue sky, blurred images because of rainy or foggy weather, wet streets, really dark or light images, occlusion due raindrops or other objects and a high amount of objects like cars or pedestrians crossing the street.
 
-![image](../master/images/Dataset_1.png)
+![image](images/Dataset_1.png)
 
 The following chart shows the class distribution of 2000 images. You can see that the most objects of the dataset are vehicles. The number of pedestrians is one third of the vehicles while the dataset contains only a few cyclists.
 
-![image](../master/images/Numberobjects.png)
+![image](images/Numberobjects.png)
 
 ### Cross validation
 This section should detail the cross validation strategy and justify your approach.
@@ -33,28 +33,28 @@ For the cross validation the dataset is split into training, validation and test
 This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
 
 The loss course of the given model is shown in the following image of Tensorboard. With that results it is not possible to detect and display any objects during the test stage. In that case it is crucial to improve the performance.
-![image](../master/images/Reference.png)
+![image](images/Reference.png)
 
 ### Improve on the reference
 This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
 
 #### Experiment 1
 To improve the model I added in the first experiment gray, brightness and contrast as augmentation options.
-![image](../master/images/Augmentation.png) ![image](../master/images/Augmentation2.png)
+![image](images/Augmentation.png) ![image](images/Augmentation2.png)
 
 Differently than thought the loss of the model was worse then the reference.
-![image](../master/images/Loss.png)
+![image](images/Loss.png)
 
 
 #### Experiment 2
 In that case I added saturation as another augmentation option. With that change the loss decline, but in the test stage no objects could be detected.
-![image](../master/images/Loss2.png)
+![image](images/Loss2.png)
 
 
 #### Experiment 3
 In the last eperiment I changed the optimizer from momentum to adam and added a stepwise annealing strategy. With those changes the loss of the model would be approaching to zero with further epochs.
-![image](../master/images/Loss3.png)
+![image](images/Loss3.png)
 
 The results of the model are visualized in the following image. Now it is possible to detect and display the objects of an image in the test stage.
-![image](../master/images/Animation2.png)
+![image](images/Animation2.png)
 
