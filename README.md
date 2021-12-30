@@ -158,7 +158,7 @@ The following chart shows the class distribution of 2000 random images. You can 
 ![image](images/Numberobjects.png)
 
 #### Cross validation
-For the cross validation the dataset is split into training, validation and testing. With training the neural network by using only a subset of the dataset and by testing it with unknown images you can evaluate the model very efficiently and prevent overfitting. For that 87 sequences (80-90% of the available date) were used for training, 10 (10-20% of the available date) for validation and 3 for testing purpose.
+For the cross validation the dataset is split into training, validation and testing. With training the neural network by using only a subset of the dataset and by testing it with unknown images you can evaluate the model very efficiently and prevent overfitting. For that 87 sequences (80-90% of the available data) were used for training, 10 (10-20% of the available data) for validation and 3 for testing purpose.
 
 ### Training
 #### Reference experiment
@@ -167,7 +167,8 @@ The loss graph of the given model is shown in the following image of Tensorboard
 
 #### Improve on the reference
 ##### Experiment 1
-In the first experiment I added to the reference model gray, brightness and contrast as augmentation options to improve the model.
+In the first experiment I added to the reference model gray, brightness and contrast as augmentation options to improve the model.  
+
 ![image](images/Augmentation.png) ![image](images/Augmentation2.png)
 
 Differently than thought the loss of the model was worse than the reference.
