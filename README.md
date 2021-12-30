@@ -141,7 +141,7 @@ python inference_video.py --labelmap_path label_map.pbtxt --model_path experimen
 ## Submission Template
 
 ### Project overview
-The goal of the project is to detect objects like pedestrians, vehicles and cyclists in the Waymo Open dataset. The base of the assignment is a neural network called Segnet. The first step is to explore the several images of the dataset and split them for training, validation and testing. Additionally it is necessary to adopt different strategies to improve the model and get better results.
+The goal of the project is to detect objects like pedestrians, vehicles and cyclists in the Waymo Open dataset. The base of the assignment is a neural network called Segnet. The first step is to explore the several images of the dataset and split them for training, validation and testing. Additionally it is necessary to adopt different strategies to improve the model and get better results.  
 Object detection is an essential component of a self driving car. The system must understand the environment, otherwise it is not able to locate and navigate through it. Especially for safety reasons you need to know which of the objects are human beings or which are static or dynamic objects to make predictions.
 
 ### Set up
