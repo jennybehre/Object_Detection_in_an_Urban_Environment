@@ -141,20 +141,14 @@ python inference_video.py --labelmap_path label_map.pbtxt --model_path experimen
 ## Submission Template
 
 ### Project overview
-This section should contain a brief description of the project and what we are trying to achieve. Why is object detection such an important component of self driving car systems?
-
 The goal of the project is to detect objects like pedestrians, vehicles and cyclists in the Waymo Open dataset. The base of the assignment is a neural network called Segnet. The first step is to explore the several images of the dataset and split them for training, validation and testing. Additionally it is necessary to adopt different strategies to improve the model and get better results.
 Object detection is an essential component of a self driving car. The system must understand the environment, otherwise it is not able to locate and navigate through it. Especially for safety reasons you need to know which of the objects are human beings or which are static or dynamic objects to make predictions.
 
 ### Set up
-This section should contain a brief description of the steps to follow to run the code for this repository.
-
 I used the Udacity workspace to run the code for this repository. To reproduce the results copy the files into the workspace and follow the instruction which is given in the README.md of the project.
 
 ### Dataset
 #### Dataset analysis
-This section should contain a quantitative and qualitative description of the dataset. It should include images, charts and other visualizations.
-
 With the Exploratory Data Analysis.ipynb jupyter notebook it is possible to look at several images from the Waymo Open dataset. Vehicles are marked with red, pedestrians with blue and cyclists with green rectangles. As you can see in the following images the dataset contains images with perfect weather conditions like a clear blue sky but there are also blurred images because of rainy or foggy weather, images with wet streets or really dark or light images. Also there are images with occlusion due raindrops or other objects. Additionally there are differences regarding the amount of objects like cars or pedestrians crossing the street.
 
 ![image](images/Dataset_1.png)
@@ -164,20 +158,14 @@ The following chart shows the class distribution of 2000 random images. You can 
 ![image](images/Numberobjects.png)
 
 #### Cross validation
-This section should detail the cross validation strategy and justify your approach.
-
 For the cross validation the dataset is split into training, validation and testing. With training the neural network by using only a subset of the dataset and by testing it with unknown images you can evaluate the model very efficiently and prevent overfitting. For that 87 sequences (80-90% of the available date) were used for training, 10 (10-20% of the available date) for validation and 3 for testing purpose.
 
 ### Training
 #### Reference experiment
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
-
 The loss graph of the given model is shown in the following image of Tensorboard. With that results it is not possible to detect and display any objects during the test stage. In that case it is crucial to improve the performance.
 ![image](images/Reference.png)
 
 #### Improve on the reference
-This section should highlight the different strategies you adopted to improve your model. It should contain relevant figures and details of your findings.
-
 ##### Experiment 1
 In the first experiment I added to the reference model gray, brightness and contrast as augmentation options to improve the model.
 ![image](images/Augmentation.png) ![image](images/Augmentation2.png)
@@ -185,11 +173,9 @@ In the first experiment I added to the reference model gray, brightness and cont
 Differently than thought the loss of the model was worse than the reference.
 ![image](images/Loss.png)
 
-
 ##### Experiment 2
 To improve the results, I added saturation as another augmentation option to the model of experiment 1. With that change the loss declined, but in the test stage no objects could be detected.
 ![image](images/Loss2.png)
-
 
 ##### Experiment 3
 In the last experiment I further modified the model. For that I changed the optimizer from momentum to adam and added a stepwise annealing strategy. With those changes the loss of the model would be approaching to zero with further epochs.
